@@ -31,7 +31,7 @@ parser.add_argument("--seed", default=42, type=int)
 
 # HuggingFace repo setup
 parser.add_argument("--push_to_hub", default=True, type=bool)
-parser.add_argument("--hub_model_id", default="../unconditional_sky_diffusion", type=str)
+parser.add_argument("--hub_model_id", default="unconditional_sky_diffusion", type=str)
 parser.add_argument("--hub_private_repo", default=False, type=bool)
 parser.add_argument("--overwrite_output_dir", default=True, type=bool)
 args = parser.parse_args()
