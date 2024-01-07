@@ -46,7 +46,7 @@ class SkyDatasetUnconditional(Dataset):
             sample = Image.open(self._image_path_list[item])
         except FileNotFoundError:
             raise FileNotFoundError(
-                f"Could not open file {self._image_path_list[item]}. . Check correctness of the description file {self._desc_file}"
+                f"Could not open file {self._image_path_list[item]}. Check correctness of the description file {self._desc_file}"
             )
 
         if self._transform:
