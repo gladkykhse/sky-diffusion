@@ -27,7 +27,7 @@ parser.add_argument("--save_image_epochs", default=5, type=int)
 parser.add_argument("--save_model_epochs", default=5, type=int)
 parser.add_argument("--mixed_precision", default="fp16", type=str)
 parser.add_argument("--output_dir", default="../unconditional_sky_diffusion", type=str)
-parser.add_argument("--seed", default=42, required=True, type=int)
+parser.add_argument("--seed", default=42, type=int)
 
 # HuggingFace repo setup
 parser.add_argument("--push_to_hub", default=True, type=bool)
