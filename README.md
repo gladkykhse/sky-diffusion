@@ -58,6 +58,10 @@ for Linux systems)
   - `conditional_generation` - This directory houses notebooks focused on training, data preparation, as well as separate notebook for sampling and evaluation for the conditional image generation task employing DDPM models.
   - `unconditional_video_generation` - Here, you'll find notebooks dedicated to training, dataset creation, sampling, and evaluation for the unconditional video generation task using VDM models.
   - `conditional_video_generation` - This directory contains notebooks dedicated to training, sampling, and evaluation for the conditional video generation task using RaMViD models.
+- `data_samples` - this directory contains GIF samples extracted from the dataset that serve as conditioning data for sampling from conditional models
+  - `gif_64` - 20 video samples of 64x64 resolution
+  - `gif_128` - 20 video samples of 128x128 resolution
+
 
 ## Sampling from trained models
 
