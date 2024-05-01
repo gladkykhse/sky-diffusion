@@ -47,6 +47,10 @@ conda activate sky_diffusion
 pip install -r requirements.txt
 ```
 
+Note: there might be a problem with `mpi4py` installation. It can be solved by installing
+appropriate Open MPI library for your system (e.g. `mpich` for MacOS, or `openmpi` may help
+for Linux systems)
+
 ## Project structure
 
 - `research` - this directory contains the code utilized in this work (only final files).
