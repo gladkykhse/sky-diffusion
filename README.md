@@ -6,20 +6,58 @@ Charles University, Faculty of Mathematics and Physics, Prague, Czech Republic.
 ## Installation
 A key part of this work was developed in Jupyter notebooks due to their convenience in research projects.
 We used Conda as a package and environment management system for installing and managing software packages
-and dependencies. To set up an environment using the `environment.yaml` file provided in the root of this
-repository, follow these steps:
+and dependencies. You can either set up an environment using our `environment.yaml` file (for Linux machines
+only), or manually install dependencies listed in `requirements.txt`.
 
-### 1. Install Conda
-If you haven't already installed Conda, please follow the guide provided on the [Official Conda website](https://docs.anaconda.com/free/miniconda/) to install it for your OS.
-### 2. Clone project
+### Setup with Conda environment file
+
+__1. Install Conda__
+```shell
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+__2. Clone project__
 ```shell
 git clone https://github.com/gladkykhse/sky-diffusion.git && cd sky-diffusion
 ```
-### 2. Create a Conda Environment
+__3. Create a Conda Environment__
 ```shell
 conda env create -f environment.yaml
 ```
-### 3. Activate the Environment
+__4. Activate the Environment__
 ```shell
 conda activate sky_diffusion
 ```
+
+### Manual setup
+In this project, we utilized `Python 3.11.5`. Hence, we highly recommend using the same
+version to ensure compatibility with all libraries.
+
+You can either create a virtual environment and install all dependencies using pip:
+```shell
+python -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+```
+
+Or create own Conda environment and again install all dependencies:
+```shell
+conda create --name sky_diffusion python=3.11
+conda activate sky_diffusion
+pip install -r requirements.txt
+```
+
+## Project structure
+
+- `research` - this directory contains the code utilized in this work (only final files).
+  - `unconditional_generation` - Within this directory, you'll find notebooks dedicated to training, sampling, and evaluation for the unconditional image generation task using DDPM/DDIM models.
+  - `conditional_generation` - This directory houses notebooks focused on training, data preparation, as well as separate notebook for sampling and evaluation for the conditional image generation task employing DDPM models.
+  - `unconditional_video_generation` - Here, you'll find notebooks dedicated to training, dataset creation, sampling, and evaluation for the unconditional video generation task using VDM models.
+  - `conditional_video_generation` - This directory contains notebooks dedicated to training, sampling, and evaluation for the conditional video generation task using RaMViD models.
+
+## Sampling from trained models
+
+If you would like to use pretrained models and just generate images/videos you can download our final models
+from public [Google Drive](https://drive.google.com/drive/folders/1y152MTtJKnmH_0nJki5FBsSeqUuYfyn4?usp=sharing),
+and change the value of the `MODEL_PATH` variable within all sampling notebooks with the exact path to the
+corresponding model on your local machine.
