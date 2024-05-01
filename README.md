@@ -1,1 +1,1 @@
-# Generating sky images using Diffusion-based model 
+# Denoising Diffusion Models for Dynamic Sky Image Generation
