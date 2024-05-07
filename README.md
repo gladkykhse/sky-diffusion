@@ -65,7 +65,7 @@ for Linux systems)
 
 ## Sampling from trained models
 
-If you would like to use pretrained models and just generate images/videos you can download our final models
-from public [Google Drive](https://drive.google.com/drive/folders/1y152MTtJKnmH_0nJki5FBsSeqUuYfyn4?usp=sharing),
-and change the value of the `MODEL_PATH` variable within all sampling notebooks with the exact path to the
-corresponding model on your local machine.
+If you would like to use pretrained models and just generate images/videos you have to download our final models
+and dataset examples from public [Google Drive](https://drive.google.com/drive/folders/1y152MTtJKnmH_0nJki5FBsSeqUuYfyn4?usp=sharing). After that you have to change the value of the variables
+containing model and data paths within all sampling notebooks with the exact path to the corresponding
+file/directory on your machine.
